@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/titleactionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar" >
+
+        <RelativeLayout
+            android:id="@+id/toolbar_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/toolbar_left_image"
+                style="@style/toolbar_left_button_image2"
+                android:clickable="true" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smjs"
+                android:textColor="#FFFFFF" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/toolbar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dip"
+            android:clickable="true" >
+
+            <ImageView
+                android:id="@+id/toolbar_right_image"
+                style="@style/toolbar_left_button_image1"
+                android:clickable="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/retrive_main"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/titleactionbar"
+        android:background="@drawable/book_bg"
+        android:orientation="vertical" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup_bookretrive"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleactionbar"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:paddingTop="10.0dip" >
+
+            <RadioButton
+                android:id="@+id/radioButton1_title"
+                android:layout_width="89dip"
+                android:layout_height="wrap_content"
+                android:button="@drawable/title_button"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/radioButton2_author"
+                android:layout_width="89dip"
+                android:layout_height="wrap_content"
+                android:button="@drawable/author_button"
+                android:checked="false" />
+        </RadioGroup>
+
+        <RelativeLayout
+            android:id="@+id/midbook"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/radioGroup_bookretrive"
+            android:layout_marginBottom="30dip"
+            android:orientation="vertical" >
+
+            <FrameLayout
+                android:id="@+id/frameLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radioGroup_bookretrive"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="20.0dip"
+                android:paddingRight="20.0dip"
+                android:paddingTop="30.0dip" >
+
+                <EditText
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/searchtool"
+                    android:hint="@string/search_hint"
+                    android:paddingLeft="30dp"
+                    android:singleLine="true" />
+
+                <ImageButton
+                    android:id="@+id/imageView_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/speak"
+                    android:background="@drawable/search"
+                    android:scaleType="center" />
+
+                <ImageButton
+                    android:id="@+id/imageButton_openspeechrecognition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:background="@drawable/voice"
+                    android:contentDescription="@string/speak"
+                    android:scaleType="center" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/searchbackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/frameLayout"
+                android:layout_marginLeft="10.0dip"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="10.0dip"
+                android:paddingTop="40.0dip"
+                android:src="@drawable/searchbackground" />
+            
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

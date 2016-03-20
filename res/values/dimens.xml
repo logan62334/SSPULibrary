@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="actionbar_height">60.0dip</dimen>
+    <dimen name="actionbar_item_height">60.0dip</dimen>
+    <dimen name="actionbar_item_width">42.0dip</dimen>
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+</resources>

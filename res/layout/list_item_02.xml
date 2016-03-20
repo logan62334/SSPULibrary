@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="25dp"
+            android:paddingRight="27dp"
+            android:paddingTop="5dp"
+            android:textColor="#000000"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/title"
+            android:paddingLeft="25dp"
+            android:paddingRight="27dp"
+            android:paddingTop="5dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/gcwz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/author"
+            android:paddingLeft="25dp"
+            android:paddingRight="27dp"
+            android:paddingTop="5dp"
+            android:textColor="#000000"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/jysj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gcwz"
+            android:paddingLeft="25dp"
+            android:paddingRight="27dp"
+            android:paddingTop="5dp"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/ghsj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/jysj"
+            android:paddingLeft="25dp"
+            android:paddingRight="27dp"
+            android:paddingTop="5dp"
+            android:textColor="#666666"
+            android:textSize="14dp"
+            android:textStyle="italic" />
+  
+
+</RelativeLayout>

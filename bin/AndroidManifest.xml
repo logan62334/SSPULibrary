@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sspu.library"
+    android:versionCode="3"
+    android:versionName="3.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="12" />
+    <!-- 往sdcard中写入数据的权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" >
+    </uses-permission>
+    <!-- 在sdcard中创建/删除文件的权限 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" >
+    </uses-permission>
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.sspu.library.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <permission
+        android:name="com.sspu.library.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name="com.sspu.library.ExampleApplication"
+        android:icon="@drawable/app_icon_big"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.sspu.library.Appstart"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.sspu.library.info.UiInfo" />
+        <activity android:name="com.sspu.library.util.MainActivity" />
+        <activity android:name="com.sspu.library.readerservice.UiReader" />
+        <activity android:name="com.sspu.library.readerservice.BroadcastDetail" />
+        <activity android:name="com.sspu.library.exhibitionlecture.UiActivity" />
+        <activity android:name="com.sspu.library.mylibrary.UiPerson" />
+        <activity
+            android:name="com.sspu.library.booklistsearch.UiRetrieval"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="com.sspu.library.BaseActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name="com.sspu.library.info.Speech" />
+        <activity
+            android:name="com.sspu.library.info.BaseUi3"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sspu.library.readerservice.BaseUi1"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sspu.library.mylibrary.BaseUi4"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sspu.library.exhibitionlecture.BaseUi2"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.sspu.library.info.MuseumCondition" />
+        <activity android:name="com.sspu.library.info.Rules" />
+        <activity android:name="com.sspu.library.info.StructureDetail" />
+        <activity android:name="com.sspu.library.info.OpenTime" />
+        <activity android:name="com.sspu.library.info.OpenTimeDetail" />
+        <activity android:name="com.sspu.library.info.BranchMap" />
+        <activity android:name="com.sspu.library.readerservice.Introduction" />
+        <activity android:name="com.sspu.library.readerservice.Service" />
+        <activity android:name="com.sspu.library.readerservice.News" />
+        <activity android:name="com.sspu.library.readerservice.Tips" />
+        <activity android:name="com.sspu.library.readerservice.NewArrivals" />
+        <activity android:name="com.sspu.library.readerservice.pxjz" />
+        <activity android:name="com.sspu.library.readerservice.CommonProblem" />
+        <activity android:name="com.sspu.library.readerservice.Helps" />
+        <activity android:name="com.sspu.library.readerservice.YellowPages" />
+        <activity android:name="com.sspu.library.AndyViewPagerActivity" />
+        <activity android:name="com.sspu.library.ViewPagerActivity" />
+        <activity android:name="com.sspu.library.info.Detail" />
+        <activity android:name="com.sspu.library.service.Login" />
+        <activity android:name="com.sspu.library.Welcome" />
+        <activity android:name="com.sspu.library.service.MapViewService" />
+        <activity android:name="com.sspu.library.service.MyLocationActivity" />
+        <activity android:name="com.sspu.library.info.Branch" />
+        <activity android:name="com.sspu.library.mylibrary.LendingInfo" />
+        <activity android:name="com.sspu.library.mylibrary.History" />
+        <activity android:name="com.sspu.library.mylibrary.Recall" />
+        <activity android:name="com.sspu.library.mylibrary.About" />
+        <activity android:name="com.sspu.library.mylibrary.Reback" />
+        <activity android:name="com.sspu.library.booklistsearch.Searchresult_main" />
+        <activity android:name="com.sspu.library.booklistsearch.Searchresult_detail" />
+        <activity android:name="com.sspu.library.exhibitionlecture.EventsDetail" />
+        <activity android:name="com.sspu.library.mylibrary.wdtsgDetail" />
+        <activity android:name="com.sspu.library.TestActivity" >
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.sspu.library" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true" >
+            <intent-filter android:priority="1000" >
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" /> <!-- Required  显示通知栏 -->
+                <category android:name="com.sspu.library" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name="com.sspu.library.MyReceiver"
+            android:enabled="true" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!-- Optional 用户接受Rich Push Javascript 回调函数的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.sspu.library" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+            android:name="JPUSH_CHANNEL"
+            android:value="developer-default" />
+        <meta-data
+            android:name="JPUSH_APPKEY"
+            android:value="ea1a9b7400bcfdc28c1b12d1" /> <!-- </>值来自开发者平台取得的AppKey -->
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+</manifest>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/sspu/library/booklistsearch/SearchSuggestionSampleProvider.java|com/sspu/library/service/CustomItemizedOverlay.java|com/sspu/library/service/MapViewService.java|com/sspu/library/service/MyLocationActivity.java|com/example/jpushdemo/MainActivity.java|com/example/jpushdemo/SettingActivity.java|com/example/jpushdemo/PushSetActivity.java|com/sspu/library/readerservice/BaseUi1.java|com/sspu/library/mylibrary/BaseUi4.java|com/sspu/library/info/BaseUi3.java|com/sspu/library/exhibitionlecture/BaseUi2.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
